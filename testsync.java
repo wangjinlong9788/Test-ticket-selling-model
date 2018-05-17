@@ -1,11 +1,11 @@
 
 public class testsync {  
     private int num=10; 
-    public synchronized void sell(){  
+    public synchronized void sell(){  //synchronize the threads
         if(num==0){  
             return;  
         }  
-        num--;  
+        num--;  //ticket minus one once sold
         System.out.println(Thread.currentThread().getName()+"One ticket sold,remain"+num+"ticket");  
     }  
     class window implements Runnable{  
